@@ -258,7 +258,7 @@ h1, h2, h3, p { margin: 0; }
 .sidebar-backdrop {
   position: fixed;
   inset: 0;
-  z-index: 55;
+  z-index: 40;
   background: rgba(20, 31, 37, 0.45);
   backdrop-filter: blur(2px);
   opacity: 0;
@@ -1233,6 +1233,8 @@ h1, h2, h3, p { margin: 0; }
 
 @media (max-width: 900px) {
   .app { display: block; }
+  /* Altura real del viewport móvil (100dvh), sin los cortes de la barra del navegador */
+  .app, .main { height: 100vh; height: 100dvh; }
   .sidebar {
     position: fixed;
     top: 0; left: 0; bottom: 0;
@@ -1250,23 +1252,23 @@ h1, h2, h3, p { margin: 0; }
 @media (max-width: 720px) {
   .about-cards { grid-template-columns: 1fr; }
   .cover-inner {
-    gap: clamp(16px, 3vh, 24px);
-    padding-top: clamp(68px, 10vh, 78px);
-    padding-bottom: clamp(20px, 3vh, 28px);
+    gap: 14px;
+    padding-top: clamp(56px, 9vh, 68px);
+    padding-bottom: clamp(16px, 2.5vh, 24px);
   }
-  .cover-specialty { font-size: clamp(1.02rem, 4.6vw, 1.2rem); gap: 14px; margin-top: 14px; }
-  .cover-name { font-size: clamp(2rem, 8vw, 2.6rem); }
-  .cover-phrase { margin-top: 14px; font-size: 0.98rem; line-height: 1.6; }
-  .cover-badges { margin-top: 18px; gap: 8px; }
-  .chip { padding: 8px 14px; font-size: 0.76rem; }
+  .cover-specialty { font-size: clamp(0.95rem, 4.2vw, 1.05rem); gap: 12px; margin-top: 10px; }
+  .cover-name { font-size: clamp(1.7rem, 7.6vw, 2.2rem); }
+  .cover-phrase { margin-top: 10px; font-size: 0.92rem; line-height: 1.55; }
+  .cover-badges { margin-top: 12px; gap: 8px; }
+  .chip { padding: 8px 13px; font-size: 0.74rem; }
   .cover-actions {
-    margin-top: 22px;
+    margin-top: 14px;
     gap: 10px;
     flex-direction: column;
     align-items: stretch;
     width: min(100%, 300px);
   }
-  .cover-photo-frame { width: min(64vw, 320px); max-height: 40vh; }
+  .cover-photo-frame { width: min(56vw, 240px); max-height: 30vh; }
   .cards-grid,
   .charlas-grid,
   .testimonios-grid,
