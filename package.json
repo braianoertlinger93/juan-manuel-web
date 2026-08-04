@@ -1,0 +1,29 @@
+{
+  "name": "psicologo-adicciones",
+  "version": "1.0.0",
+  "description": "Sitio web profesional para un Licenciado en Psicología especializado en adicciones. Portada fija, menú lateral, panel de administración y Supabase.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "vercel:dev": "vercel dev",
+    "db:init": "echo 'Ejecutá sql/schema.sql en el SQL Editor de Supabase'"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "psicologia",
+    "adicciones",
+    "supabase",
+    "express",
+    "vercel"
+  ],
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}

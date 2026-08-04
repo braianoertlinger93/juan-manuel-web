@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#2E4B55" />
+
+  <!-- SEO -->
+  <title>Lic. Juan Manuel — Especialista en Consumos Problemáticos y Adicciones</title>
+  <meta name="description" content="Especialista en adicciones y consumos problemáticos. Un espacio de escucha profesional para comenzar un camino de cambio. Atención, orientación y acompañamiento." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Braian Oertlinger" />
+  <link rel="canonical" href="https://tu-dominio-ejemplo.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Lic. Juan Manuel — Especialista en Consumos Problemáticos" />
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:title" content="Lic. Juan Manuel — Especialista en Consumos Problemáticos y Adicciones" />
+  <meta property="og:description" content="Un espacio de escucha profesional para comenzar un camino de cambio. Atención, orientación y acompañamiento." />
+  <meta property="og:url" content="https://tu-dominio-ejemplo.com/" />
+  <meta property="og:image" content="https://tu-dominio-ejemplo.com/assets/img/og-image.svg" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Lic. Juan Manuel — Especialista en Consumos Problemáticos y Adicciones" />
+  <meta name="twitter:description" content="Un espacio de escucha profesional para comenzar un camino de cambio. Atención, orientación y acompañamiento." />
+  <meta name="twitter:image" content="https://tu-dominio-ejemplo.com/assets/img/og-image.svg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="/css/styles.css" />
+
+  <!-- Datos estructurados -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Lic. Juan Manuel Álvarez Basabe",
+    "description": "Especialista en adicciones y consumos problemáticos. Acompañamiento, orientación y prevención.",
+    "image": "https://tu-dominio-ejemplo.com/fotos/perfil/WhatsApp%20Image%202026-08-03%20at%2017.49.00.jpeg",
+    "url": "https://tu-dominio-ejemplo.com/",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Pergamino",
+      "addressRegion": "Buenos Aires",
+      "addressCountry": "AR"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Appointments",
+      "telephone": "+54 9 2474 443614"
+    }
+  }
+  </script>
+
+  <!-- Config inyectada por el servidor (URL y anon key de Supabase) -->
+  <script>
+    window.SUPABASE_CONFIG = /*CONFIG*/ null;
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Saltar al contenido</a>
+
+  <div class="app">
+    <!-- ======================= MENÚ LATERAL ======================= -->
+    <aside class="sidebar" id="sidebar" aria-label="Menú de navegación">
+      <button class="brand" type="button" data-goto="cover" aria-label="Volver a la portada" title="Volver a la portada">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" width="50" height="50">
+            <circle cx="32" cy="30" r="14" fill="none" stroke="currentColor" stroke-width="3"/>
+            <path d="M20 30 v18 M44 30 v18 M32 30 v20" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name" data-field="brand.name">Lic. Juan Manuel</span>
+          <span class="brand-tag">Consumos Problemáticos</span>
+        </span>
+      </button>
+
+      <nav class="nav" aria-label="Secciones del sitio">
+        <ul class="nav-list">
+          <li><button class="nav-item" type="button" data-goto="about"><span class="nav-num">01</span>Sobre mí</button></li>
+          <li><button class="nav-item" type="button" data-goto="specialties"><span class="nav-num">02</span>Especialidades</button></li>
+          <li><button class="nav-item" type="button" data-goto="events"><span class="nav-num">03</span>Charlas y Conferencias</button></li>
+          <li><button class="nav-item" type="button" data-goto="testimonials"><span class="nav-num">04</span>Testimonios</button></li>
+          <li><button class="nav-item" type="button" data-goto="videos"><span class="nav-num">05</span>Videos</button></li>
+          <li><button class="nav-item" type="button" data-goto="contact"><span class="nav-num">06</span>Contacto</button></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a class="btn btn-primary btn-block" href="#" data-whatsapp-link target="_blank" rel="noopener">WhatsApp</a>
+        <p class="sidebar-note">Turnos · Consultas</p>
+      </div>
+    </aside>
+
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="sidebar">
+      <span class="menu-toggle-line"></span>
+      <span class="menu-toggle-line"></span>
+      <span class="menu-toggle-line"></span>
+    </button>
+    <div class="sidebar-backdrop" id="sidebar-backdrop" hidden></div>
+
+    <!-- ======================= CONTENIDO ======================= -->
+    <main class="main" id="main-content" tabindex="-1">
+      <!-- PORTADA -->
+      <section class="section section-cover active" id="section-cover" aria-label="Portada">
+        <div class="cover-inner">
+            <div class="cover-copy">
+              <h1 class="cover-name" data-field="hero.name">Lic. Juan Manuel</h1>
+              <p class="cover-specialty">Especialista en Consumos Problemáticos</p>
+              <p class="cover-phrase" data-field="hero.phrase">No tenés que atravesar este proceso en soledad. Encontrá un espacio de escucha profesional para comenzar un camino de cambio.</p>
+            <ul class="cover-badges">
+              <li class="chip"><span class="chip-dot" aria-hidden="true"></span>Licenciado en Educación</li>
+              <li class="chip"><span class="chip-dot" aria-hidden="true"></span>Especialista en Consumos Problemáticos</li>
+            </ul>
+            <div class="cover-actions">
+              <a class="btn btn-primary cover-cta" href="https://wa.me/5492474443614?text=Hola%20Juan%20Manuel.%20Estuve%20visitando%20tu%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20una%20consulta." data-whatsapp-link target="_blank" rel="noopener">Solicitar turno</a>
+              <a class="btn btn-ghost cover-cta-ghost" href="#" data-goto="about">Conocer mi trabajo</a>
+            </div>
+          </div>
+          <div class="cover-photo">
+            <figure class="cover-photo-frame">
+              <img id="cover-portrait" class="cover-photo-img" src="/fotos/perfil/WhatsApp%20Image%202026-08-03%20at%2017.49.00.jpeg" alt="Fotografía del Lic. Juan Manuel" width="738" height="1600" fetchpriority="high" />
+              <figcaption class="sr-only">Fotografía del profesional</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOBRE MÍ -->
+      <section class="section" id="section-about" aria-labelledby="about-title">
+        <div class="section-inner">
+          <header class="section-head">
+            <p class="section-kicker">Sobre mí</p>
+            <h2 class="section-title" id="about-title">¿Desde qué lugar profesional abordo las adicciones?</h2>
+            <p class="section-intro">Las adicciones son una problemática compleja que no puede comprenderse ni tratarse desde una única profesión. Este es mi punto de partida.</p>
+          </header>
+
+          <div class="about-intro">
+            <figure class="about-photo">
+              <img id="about-portrait" src="/fotos/perfil/WhatsApp%20Image%202026-08-03%20at%2017.49.00.jpeg" alt="Fotografía del Lic. Juan Manuel" loading="lazy" width="738" height="1600" />
+            </figure>
+            <div>
+              <p class="about-name">Lic. Juan Manuel</p>
+              <p class="about-role">Licenciado en Educación · Especialista en Consumos Problemáticos</p>
+              <p class="about-presentation">Trabajo desde una formación interdisciplinaria específica: Licenciado en Educación, Diplomado Universitario en Abordaje de los Consumos Problemáticos, Operador en Psicología Social y Acompañante Terapéutico. Cada disciplina aporta herramientas particulares que, integradas entre sí, me permiten ofrecer un abordaje amplio, integral y centrado en la persona y su contexto.</p>
+            </div>
+          </div>
+
+          <div class="about-cards">
+            <article class="card">
+              <div class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M12 4L2 8l10 4 10-4-10-4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M6 10v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M22 8v5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h3 class="card-title">Mi formación</h3>
+              <p class="card-desc">Licenciado en Educación, Diplomado en Abordaje de los Consumos Problemáticos, Operador en Psicología Social y Acompañante Terapéutico: cuatro pilares de formación que, integrados, sostienen mi intervención profesional.</p>
+            </article>
+            <article class="card">
+              <div class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+                  <path d="M15.5 8.5l-2 5-5 2 2-5 5-2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3 class="card-title">Mi forma de trabajar</h3>
+              <p class="card-desc">Parto de una convicción: las adicciones requieren un verdadero abordaje interdisciplinario, donde cada profesión aporta conocimientos, competencias y herramientas que se complementan entre sí.</p>
+            </article>
+            <article class="card">
+              <div class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="5" r="2.2" stroke="currentColor" stroke-width="2"/>
+                  <circle cx="5" cy="18" r="2.2" stroke="currentColor" stroke-width="2"/>
+                  <circle cx="19" cy="18" r="2.2" stroke="currentColor" stroke-width="2"/>
+                  <path d="M12 7.2L5.4 16M12 7.2l6.6 8.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h3 class="card-title">Mi enfoque interdisciplinario</h3>
+              <p class="card-desc">Mi intervención no reemplaza el trabajo del psicólogo, del psiquiatra ni del médico cuando su participación es necesaria: se integra a él. Cada disciplina enriquece a las demás desde su propio campo, con un objetivo común.</p>
+            </article>
+          </div>
+
+          <div class="about-cta">
+            <a class="btn btn-primary" href="/abordaje.html">Conocer mi abordaje profesional</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ESPECIALIDADES -->
+      <section class="section" id="section-specialties" aria-labelledby="specialties-title">
+        <div class="section-inner">
+          <header class="section-head">
+            <p class="section-kicker">Especialidades</p>
+            <h2 class="section-title" id="specialties-title">Áreas de trabajo y acompañamiento</h2>
+            <p class="section-intro">Cada proceso es único. Estos son los espacios en los que puedo acompañarte.</p>
+          </header>
+          <div class="cards-grid" id="specialties-list">
+            <p class="loading-hint">Cargando especialidades…</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CHARLAS Y CONFERENCIAS -->
+      <section class="section" id="section-events" aria-labelledby="events-title">
+        <div class="section-inner">
+          <header class="section-head">
+            <p class="section-kicker">Galería</p>
+            <h2 class="section-title" id="events-title">Charlas y Conferencias</h2>
+            <p class="section-intro">Compartir conocimiento y generar espacios de diálogo también forma parte del proceso de prevención, acompañamiento y construcción de una sociedad más informada.</p>
+          </header>
+          <div class="charlas-grid" id="events-list">
+            <p class="loading-hint">Cargando fotografías…</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIOS -->
+      <section class="section" id="section-testimonials" aria-labelledby="testimonials-title">
+        <div class="section-inner">
+          <header class="section-head">
+            <p class="section-kicker">Voces</p>
+            <h2 class="section-title" id="testimonials-title">Testimonios</h2>
+            <p class="section-intro">Cada historia refleja un proceso único. Estos mensajes representan la confianza de quienes encontraron un espacio de acompañamiento y crecimiento.</p>
+          </header>
+          <div class="testimonios-grid" id="testimonials-list">
+            <p class="loading-hint">Cargando testimonios…</p>
+          </div>
+          <p class="disclaimer">Los testimonios fueron publicados con autorización de las personas. Se protege la identidad y privacidad de quienes los comparten.</p>
+        </div>
+      </section>
+
+      <!-- VIDEOS -->
+      <section class="section" id="section-videos" aria-labelledby="videos-title">
+        <div class="section-inner">
+          <header class="section-head">
+            <p class="section-kicker">Contenido</p>
+            <h2 class="section-title" id="videos-title">Videos</h2>
+            <p class="section-intro">Entrevistas y materiales breves sobre adicciones, recuperación y acompañamiento familiar. Reproducilos acá o miralos en Facebook.</p>
+          </header>
+          <div class="videos-grid" id="videos-list">
+            <p class="loading-hint">Cargando videos…</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACTO -->
+      <section class="section" id="section-contact" aria-labelledby="contact-title">
+        <div class="section-inner">
+          <header class="section-head">
+            <p class="section-kicker">Contacto</p>
+            <h2 class="section-title" id="contact-title">¿Querés dar el primer paso?</h2>
+            <p class="section-intro">Si necesitás orientación o querés realizar una consulta, podés comunicarte directamente conmigo. Cada proceso comienza con una conversación.</p>
+          </header>
+
+          <div class="contact-hero">
+            <a class="contact-whatsapp-btn" href="#" data-whatsapp-link target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.974.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              <span>Hablar por WhatsApp</span>
+            </a>
+            <p class="contact-whatsapp-hint" data-field="contact.whatsapp_display">+54 9 2474 443614</p>
+          </div>
+
+          <div class="contact-cards">
+            <a class="contact-card" href="#" data-mail-link>
+              <span class="contact-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 7 9 6 9-6"/></svg></span>
+              <span class="contact-card-body">
+                <span class="contact-card-label">Correo electrónico</span>
+                <span class="contact-card-value" data-field="contact.email">contacto@ejemplo.com</span>
+              </span>
+            </a>
+            <a class="contact-card" href="#" data-field="contact.linkedin" data-attr="href" target="_blank" rel="noopener">
+              <span class="contact-card-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg></span>
+              <span class="contact-card-body">
+                <span class="contact-card-label">LinkedIn</span>
+                <span class="contact-card-value">Perfil profesional</span>
+              </span>
+            </a>
+            <a class="contact-card" href="#" data-field="contact.facebook" data-attr="href" target="_blank" rel="noopener">
+              <span class="contact-card-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 9H16l.5-3h-3V4.5c0-.9.3-1.5 1.7-1.5h1.4V.2C16.3.2 15.3 0 14.2 0 11.7 0 10 1.5 10 4.3V6H7v3h3v9h3.5V9z"/></svg></span>
+              <span class="contact-card-body">
+                <span class="contact-card-label">Facebook</span>
+                <span class="contact-card-value">Página profesional</span>
+              </span>
+            </a>
+          </div>
+
+          <div class="contact-location">
+            <span class="contact-location-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
+            <p class="contact-location-text" data-field="contact.location">Atención en Pergamino, Colón y otras localidades de la región.
+
+Consultá disponibilidad por WhatsApp.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- VISOR DE IMÁGENES -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visor de imágenes" hidden>
+    <button class="lightbox-close" type="button" aria-label="Cerrar">✕</button>
+    <button class="lightbox-prev" type="button" aria-label="Imagen anterior">‹</button>
+    <figure class="lightbox-figure">
+      <img class="lightbox-img" src="" alt="" />
+      <figcaption class="lightbox-caption"></figcaption>
+    </figure>
+    <button class="lightbox-next" type="button" aria-label="Imagen siguiente">›</button>
+    <p class="lightbox-count"></p>
+  </div>
+
+  <!-- REPRODUCTOR DE VIDEO -->
+  <div class="lightbox" id="video-modal" role="dialog" aria-modal="true" aria-label="Reproductor de video" hidden>
+    <button class="lightbox-close" type="button" aria-label="Cerrar">✕</button>
+    <div class="video-embed">
+      <iframe id="video-iframe" title="Video" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- AVISOS -->
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <!-- Supabase (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Foto de ejemplo — retrato del profesional</title>
+  <desc id="desc">Imagen provisional (placeholder). Se reemplaza desde el panel de administración.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2E4B55"/>
+      <stop offset="1" stop-color="#1C313A"/>
+    </linearGradient>
+    <linearGradient id="sil" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E3D4B8"/>
+      <stop offset="1" stop-color="#CBB692"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <circle cx="400" cy="430" r="300" fill="#ffffff" opacity="0.05"/>
+  <circle cx="400" cy="430" r="205" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="1.5"/>
+  <circle cx="400" cy="430" r="188" fill="none" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1"/>
+  <path d="M170 1000 C170 750 240 605 400 605 C560 605 630 750 630 1000 Z" fill="url(#sil)"/>
+  <circle cx="400" cy="455" r="128" fill="url(#sil)"/>
+  <rect x="0" y="890" width="800" height="110" fill="#12262E"/>
+  <text x="400" y="940" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="26" fill="#E8E2D2">FOTO DE EJEMPLO</text>
+  <text x="400" y="972" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" letter-spacing="3" fill="#9FB6B8">P L A C E H O L D E R</text>
+</svg>

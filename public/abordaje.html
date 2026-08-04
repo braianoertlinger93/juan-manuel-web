@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#2E4B55" />
+
+  <title>Mi abordaje profesional — Lic. Juan Manuel</title>
+  <meta name="description" content="¿Desde qué lugar profesional abordo las adicciones? Mi formación interdisciplinaria: Licenciado en Educación, Diplomado en Consumos Problemáticos, Operador en Psicología Social y Acompañante Terapéutico." />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Lic. Juan Manuel — Especialista en Consumos Problemáticos" />
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:title" content="Mi abordaje profesional — Lic. Juan Manuel" />
+  <meta property="og:description" content="Mi formación interdisciplinaria para el abordaje de las adicciones y los consumos problemáticos." />
+  <meta property="og:url" content="https://tu-dominio-ejemplo.com/abordaje.html" />
+
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Estilos base del sitio -->
+  <link rel="stylesheet" href="/css/styles.css" />
+
+  <style>
+    /* ===== Página independiente: Mi abordaje profesional ===== */
+    body.page-article {
+      overflow: auto;
+      background: var(--bg);
+    }
+
+    .page-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px clamp(20px, 4vw, 48px);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+    .page-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--ink);
+    }
+    .page-brand-mark {
+      display: grid;
+      place-items: center;
+      flex: none;
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: var(--accent-soft);
+    }
+    .page-brand-mark svg { display: block; }
+    .page-brand-text { display: flex; flex-direction: column; line-height: 1.25; }
+    .page-brand-text strong {
+      font-family: var(--font-serif);
+      font-size: 1.02rem;
+      font-weight: 600;
+      color: var(--primary-deep);
+    }
+    .page-brand-text span {
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .page-back {
+      flex: none;
+      font-weight: 600;
+      font-size: 0.88rem;
+      color: var(--primary);
+      text-decoration: none;
+      border: 1.5px solid var(--line);
+      border-radius: 999px;
+      padding: 9px 18px;
+      transition: border-color 0.25s ease, background-color 0.25s ease;
+    }
+    .page-back:hover { border-color: var(--primary); background: var(--surface-soft); }
+
+    .page-main { padding: clamp(32px, 6vh, 64px) 0 clamp(48px, 8vh, 88px); }
+    .page-container { max-width: 860px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 40px); }
+
+    .page-hero { margin-bottom: clamp(30px, 5vh, 52px); }
+    .page-hero h1 {
+      font-family: var(--font-serif);
+      font-weight: 600;
+      font-size: clamp(1.9rem, 4.6vw, 3.1rem);
+      line-height: 1.15;
+      color: var(--primary-deep);
+      max-width: 22ch;
+      text-wrap: balance;
+    }
+
+    .page-section { margin-bottom: clamp(34px, 5vh, 56px); }
+    .page-section > h2 {
+      font-family: var(--font-serif);
+      font-weight: 600;
+      font-size: clamp(1.35rem, 2.6vw, 1.8rem);
+      color: var(--primary);
+      margin-bottom: 16px;
+      padding-left: 14px;
+      border-left: 3px solid var(--accent);
+    }
+    .page-section > p {
+      color: var(--muted);
+      font-size: 1.02rem;
+      line-height: 1.78;
+      margin-bottom: 14px;
+    }
+
+    .page-blocks { display: grid; gap: 18px; margin-top: 20px; }
+    .page-block {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      padding: 22px 24px;
+    }
+    .page-block h3 {
+      font-family: var(--font-serif);
+      font-weight: 600;
+      font-size: 1.12rem;
+      color: var(--primary-deep);
+      margin-bottom: 8px;
+    }
+    .page-block p { color: var(--muted); font-size: 0.97rem; line-height: 1.78; }
+
+    .page-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 10px;
+      padding-top: clamp(24px, 4vh, 40px);
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 720px) {
+      .page-brand-text span { display: none; }
+      .page-header { padding: 12px 16px; }
+    }
+  </style>
+</head>
+<body class="page-article">
+  <header class="page-header">
+    <a class="page-brand" href="/" aria-label="Volver al inicio">
+      <span class="page-brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64" width="34" height="34">
+          <circle cx="32" cy="30" r="14" fill="none" stroke="currentColor" stroke-width="3"/>
+          <path d="M20 30 v18 M44 30 v18 M32 30 v20" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="page-brand-text">
+        <strong>Lic. Juan Manuel</strong>
+        <span>Consumos Problemáticos</span>
+      </span>
+    </a>
+    <a class="page-back" href="/">Volver al inicio</a>
+  </header>
+
+  <main class="page-main">
+    <div class="page-container">
+      <header class="page-hero">
+        <p class="section-kicker">Sobre mí</p>
+        <h1>¿Desde qué lugar profesional abordo las adicciones?</h1>
+      </header>
+
+      <section class="page-section">
+        <h2>Presentación</h2>
+        <p>Con frecuencia me preguntan desde qué lugar profesional abordo las adicciones. La respuesta es que lo hago desde una formación interdisciplinaria específica, integrada por mi formación como Licenciado en Educación, Diplomado Universitario en Abordaje de los Consumos Problemáticos, Operador en Psicología Social y Acompañante Terapéutico. Cada una de estas disciplinas aporta herramientas particulares que, integradas entre sí, me permiten ofrecer un abordaje amplio, integral y centrado en la persona y su contexto.</p>
+        <p>Las adicciones constituyen una problemática compleja que no puede comprenderse ni tratarse desde una única profesión. Los modelos contemporáneos de atención coinciden en que requieren un abordaje interdisciplinario, en el que participan la medicina, la psiquiatría, la psicología, el trabajo social, la enfermería, la terapia ocupacional, el acompañamiento terapéutico, la intervención familiar, la psicoeducación y otros campos especializados, de acuerdo con las necesidades de cada persona.</p>
+      </section>
+
+      <section class="page-section">
+        <h2>Mi formación</h2>
+        <p>Mi intervención profesional se sostiene sobre cuatro pilares de formación:</p>
+        <div class="page-blocks">
+          <article class="page-block">
+            <h3>Licenciado en Educación</h3>
+            <p>Como Licenciado en Educación, trabajo desde la psicoeducación, una herramienta ampliamente reconocida y utilizada en salud mental y en el tratamiento de los consumos problemáticos. La psicoeducación permite que la persona comprenda qué es una adicción, cómo afecta el funcionamiento del cerebro, cuáles son los factores que sostienen el consumo y qué recursos puede desarrollar para construir una recuperación estable. Educar implica generar conciencia, promover nuevos hábitos, fortalecer habilidades personales y favorecer cambios duraderos en la conducta y en el estilo de vida.</p>
+          </article>
+          <article class="page-block">
+            <h3>Diplomado Universitario en Abordaje de los Consumos Problemáticos</h3>
+            <p>Como Diplomado Universitario en Abordaje de los Consumos Problemáticos, poseo formación específica sobre la comprensión integral del fenómeno adictivo, los factores de riesgo y de protección, las estrategias de intervención, la prevención de recaídas y el acompañamiento de las distintas etapas del proceso de recuperación.</p>
+          </article>
+          <article class="page-block">
+            <h3>Operador en Psicología Social</h3>
+            <p>Como Operador en Psicología Social, abordo la problemática comprendiendo a la persona dentro de su contexto vincular, familiar y social. En el campo de las adicciones, la familia ocupa un lugar central. Numerosos procesos de consumo se desarrollan en dinámicas relacionales complejas que también requieren ser comprendidas y transformadas. Por ello, trabajo tanto con la persona como con su entorno familiar, fortaleciendo la comunicación, promoviendo vínculos más saludables, ayudando a establecer límites adecuados y desarrollando recursos que favorezcan la recuperación. La intervención psicosocial busca producir cambios no solamente en quien consume, sino también en el sistema de relaciones que influye sobre su bienestar.</p>
+          </article>
+          <article class="page-block">
+            <h3>Acompañante Terapéutico</h3>
+            <p>Como Acompañante Terapéutico, realizo un seguimiento cercano del proceso de recuperación, favoreciendo que la persona pueda trasladar a su vida cotidiana los objetivos trabajados durante el tratamiento. El acompañamiento terapéutico facilita la adherencia al tratamiento, la organización de rutinas saludables, el fortalecimiento de la autonomía, la prevención de recaídas y la reinserción social, familiar y laboral.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="page-section">
+        <h2>Mi forma de trabajar</h2>
+        <p>Mi forma de trabajar parte de una convicción: las adicciones requieren un verdadero abordaje interdisciplinario. Cada profesión aporta conocimientos, competencias y herramientas específicas que se complementan entre sí.</p>
+      </section>
+
+      <section class="page-section">
+        <h2>Mi enfoque interdisciplinario</h2>
+        <p>Mi intervención no pretende reemplazar el trabajo del psicólogo, del psiquiatra, del médico ni de ningún otro profesional cuando su participación resulta necesaria. Del mismo modo, mi formación específica en psicoeducación, abordaje de los consumos problemáticos, intervención psicosocial, trabajo con familias y acompañamiento terapéutico constituye un aporte que también puede integrarse al trabajo de esos profesionales. El abordaje interdisciplinario es una construcción recíproca: cada disciplina enriquece a las demás desde su propio campo de competencia, con el objetivo común de la salud integral y el bienestar de la persona.</p>
+      </section>
+
+      <div class="page-cta">
+        <a class="btn btn-primary" href="https://wa.me/5492474443614?text=Hola%20Juan%20Manuel.%20Estuve%20visitando%20tu%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20una%20consulta." target="_blank" rel="noopener">Solicitar turno</a>
+        <a class="btn btn-ghost" href="/">Volver al inicio</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

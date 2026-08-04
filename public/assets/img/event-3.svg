@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">Foto de ejemplo — taller</title>
+  <desc id="desc">Imagen provisional (placeholder). Se reemplaza desde el panel de administración.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6B5E52"/>
+      <stop offset="1" stop-color="#4E443B"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <circle cx="600" cy="100" r="140" fill="#ffffff" opacity="0.06"/>
+  <circle cx="150" cy="420" r="120" fill="#ffffff" opacity="0.05"/>
+  <g fill="#ffffff" fill-opacity="0.55">
+    <circle cx="300" cy="200" r="26"/>
+    <circle cx="400" cy="200" r="26"/>
+    <circle cx="500" cy="200" r="26"/>
+    <path d="M260 300 h80 v70 h-80 z M360 300 h80 v70 h-80 z M460 300 h80 v70 h-80 z"/>
+  </g>
+  <text x="400" y="330" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="28" fill="#F0E9D9">CHARLA Y CONFERENCIAS</text>
+  <text x="400" y="365" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" letter-spacing="4" fill="#CFC4B4">FOTO DE EJEMPLO · PLACEHOLDER</text>
+</svg>

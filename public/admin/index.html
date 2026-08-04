@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Panel de administración — Lic. en Psicología</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/admin/css/admin.css" />
+
+  <script>
+    window.SUPABASE_CONFIG = /*CONFIG*/ null;
+  </script>
+</head>
+<body>
+
+  <!-- ========================= LOGIN ========================= -->
+  <div class="login-wrap" id="login-view">
+    <form class="login-card" id="login-form" novalidate>
+      <div class="login-logo" aria-hidden="true">
+        <svg viewBox="0 0 64 64" width="40" height="40">
+          <circle cx="32" cy="30" r="14" fill="none" stroke="currentColor" stroke-width="3"/>
+          <path d="M20 30 v18 M44 30 v18 M32 30 v20" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <h1 class="login-title">Panel de administración</h1>
+      <p class="login-sub">Ingresá para administrar el contenido del sitio.</p>
+
+      <div class="form-field">
+        <label for="admin-email">Correo electrónico</label>
+        <input type="email" id="admin-email" autocomplete="username" required />
+      </div>
+      <div class="form-field">
+        <label for="admin-password">Contraseña</label>
+        <input type="password" id="admin-password" autocomplete="current-password" required />
+      </div>
+
+      <p class="form-status error" id="login-error" hidden></p>
+
+      <button class="btn btn-primary btn-block" type="submit">Ingresar</button>
+      <p class="login-hint">Acceso exclusivo del administrador.</p>
+    </form>
+  </div>
+
+  <!-- ========================= PANEL ========================= -->
+  <div class="admin" id="admin-view" hidden>
+    <aside class="admin-sidebar">
+      <div class="admin-brand">
+        <span class="admin-brand-name">Panel de administración</span>
+        <span class="admin-brand-sub" id="admin-user"></span>
+      </div>
+
+      <nav class="admin-nav" aria-label="Secciones del panel">
+        <button class="admin-nav-item active" type="button" data-tab="general">General</button>
+        <button class="admin-nav-item" type="button" data-tab="specialties">Especialidades</button>
+        <button class="admin-nav-item" type="button" data-tab="events">Charlas y Conferencias</button>
+        <button class="admin-nav-item" type="button" data-tab="testimonials">Testimonios</button>
+        <button class="admin-nav-item" type="button" data-tab="videos">Videos</button>
+        <button class="admin-nav-item" type="button" data-tab="contact">Contacto</button>
+        <button class="admin-nav-item" type="button" data-tab="messages">Mensajes <span class="badge-msg" id="msg-count" hidden></span></button>
+      </nav>
+
+      <div class="admin-sidebar-foot">
+        <a class="admin-link" href="/" target="_blank">Ver el sitio ↗</a>
+        <button class="btn btn-ghost btn-block" type="button" id="logout-btn">Cerrar sesión</button>
+      </div>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-head">
+        <h1 class="admin-title" id="panel-title">General</h1>
+        <p class="admin-sub">Guardá los cambios con el botón de cada sección.</p>
+      </header>
+
+      <!-- ---------- GENERAL ---------- -->
+      <section class="admin-tab active" id="tab-general">
+        <form class="panel-card" id="hero-form">
+          <h2 class="panel-card-title">Portada</h2>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="h-name">Nombre y apellido</label>
+              <input type="text" id="h-name" />
+            </div>
+            <div class="form-field">
+              <label for="h-title">Título</label>
+              <input type="text" id="h-title" />
+            </div>
+            <div class="form-field">
+              <label for="h-specialty">Especialidad</label>
+              <input type="text" id="h-specialty" />
+            </div>
+            <div class="form-field">
+              <label for="h-badge1">Dato breve 1</label>
+              <input type="text" id="h-badge1" />
+            </div>
+            <div class="form-field">
+              <label for="h-badge2">Dato breve 2</label>
+              <input type="text" id="h-badge2" />
+            </div>
+            <div class="form-field form-field-full">
+              <label for="h-phrase">Frase principal</label>
+              <textarea id="h-phrase" rows="3"></textarea>
+            </div>
+            <div class="form-field form-field-full">
+              <label for="h-photo">Foto principal (portada)</label>
+              <input type="file" id="h-photo" accept="image/*" />
+              <p class="field-hint">Dejalo vacío si no querés cambiar la foto actual.</p>
+              <div class="upload-preview" id="h-photo-preview"></div>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="submit">Guardar portada</button>
+          <p class="form-status" id="hero-status"></p>
+        </form>
+
+        <form class="panel-card" id="about-form">
+          <h2 class="panel-card-title">Sobre mí</h2>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="a-name">Nombre mostrado</label>
+              <input type="text" id="a-name" />
+            </div>
+            <div class="form-field">
+              <label for="a-matricula">Matrícula profesional</label>
+              <input type="text" id="a-matricula" />
+            </div>
+            <div class="form-field">
+              <label for="a-photo">Fotografía (sobre mí)</label>
+              <input type="file" id="a-photo" accept="image/*" />
+              <div class="upload-preview" id="a-photo-preview"></div>
+            </div>
+            <div class="form-field form-field-full">
+              <label for="a-presentation">Texto de presentación</label>
+              <textarea id="a-presentation" rows="3"></textarea>
+            </div>
+            <div class="form-field form-field-full">
+              <label for="a-formation">Formación académica</label>
+              <textarea id="a-formation" rows="3"></textarea>
+            </div>
+            <div class="form-field form-field-full">
+              <label for="a-experience">Experiencia</label>
+              <textarea id="a-experience" rows="3"></textarea>
+            </div>
+            <div class="form-field form-field-full">
+              <label for="a-specialization">Especialización en adicciones</label>
+              <textarea id="a-specialization" rows="3"></textarea>
+            </div>
+            <div class="form-field form-field-full">
+              <label for="a-philosophy">Filosofía de trabajo</label>
+              <textarea id="a-philosophy" rows="3"></textarea>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="submit">Guardar “Sobre mí”</button>
+          <p class="form-status" id="about-status"></p>
+        </form>
+      </section>
+
+      <!-- ---------- ESPECIALIDADES ---------- -->
+      <section class="admin-tab" id="tab-specialties">
+        <div class="tab-toolbar">
+          <button class="btn btn-primary" type="button" id="add-specialty">Agregar especialidad</button>
+        </div>
+        <div class="items-list" id="specialties-editor"></div>
+      </section>
+
+      <!-- ---------- CHARLAS Y CONFERENCIAS ---------- -->
+      <section class="admin-tab" id="tab-events">
+        <div class="tab-toolbar">
+          <button class="btn btn-primary" type="button" id="add-event">Agregar charla / actividad</button>
+        </div>
+        <div class="items-list" id="events-editor"></div>
+      </section>
+
+      <!-- ---------- TESTIMONIOS ---------- -->
+      <section class="admin-tab" id="tab-testimonials">
+        <div class="tab-toolbar">
+          <button class="btn btn-primary" type="button" id="add-testimonial">Agregar testimonio</button>
+        </div>
+        <div class="items-list" id="testimonials-editor"></div>
+      </section>
+
+      <!-- ---------- VIDEOS ---------- -->
+      <section class="admin-tab" id="tab-videos">
+        <div class="tab-toolbar">
+          <button class="btn btn-primary" type="button" id="add-video">Agregar video</button>
+        </div>
+        <div class="items-list" id="videos-editor"></div>
+      </section>
+
+      <!-- ---------- CONTACTO ---------- -->
+      <section class="admin-tab" id="tab-contact">
+        <form class="panel-card" id="contact-form">
+          <h2 class="panel-card-title">Datos de contacto</h2>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="c-name">Nombre del profesional</label>
+              <input type="text" id="c-name" />
+            </div>
+            <div class="form-field">
+              <label for="c-whatsapp">Número de WhatsApp (solo dígitos, con código de país)</label>
+              <input type="text" id="c-whatsapp" placeholder="5492474443614" />
+            </div>
+            <div class="form-field">
+              <label for="c-whatsapp-display">WhatsApp (texto que se muestra)</label>
+              <input type="text" id="c-whatsapp-display" placeholder="+54 9 2474 443614" />
+            </div>
+            <div class="form-field">
+              <label for="c-email">Correo electrónico</label>
+              <input type="email" id="c-email" />
+            </div>
+            <div class="form-field">
+              <label for="c-linkedin">LinkedIn (URL)</label>
+              <input type="url" id="c-linkedin" placeholder="https://www.linkedin.com/in/…" />
+            </div>
+            <div class="form-field">
+              <label for="c-facebook">Facebook (URL)</label>
+              <input type="url" id="c-facebook" placeholder="https://www.facebook.com/share/…" />
+            </div>
+            <div class="form-field form-field-full">
+              <label for="c-location">Texto de ubicación</label>
+              <textarea id="c-location" rows="2"></textarea>
+            </div>
+            <div class="form-field form-field-full">
+              <label for="c-schedule-message">Mensaje automático de WhatsApp</label>
+              <textarea id="c-schedule-message" rows="2"></textarea>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="submit">Guardar contacto</button>
+          <p class="form-status" id="contact-status"></p>
+        </form>
+      </section>
+
+      <!-- ---------- MENSAJES ---------- -->
+      <section class="admin-tab" id="tab-messages">
+        <div class="items-list" id="messages-list"></div>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast" id="admin-toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/admin/js/admin.js"></script>
+</body>
+</html>
