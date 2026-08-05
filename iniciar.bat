@@ -3,7 +3,7 @@ title Sitio Web - Lic. en Psicologia
 setlocal
 
 rem ---------------------------------------------------------------------
-rem  INICIAR.BAT - Sitio web (Lic. en Psicologia - Especialista en Adicciones)
+rem  INICIAR.BAT - Sitio web (Lic. Juan Manuel Álvarez Basabe - Consumos Problemáticos y Adicciones)
 rem  Doble clic: verifica dependencias, instala si falta, inicia el
 rem  servidor, espera, abre el navegador y deja la consola abierta.
 rem ---------------------------------------------------------------------
@@ -12,7 +12,7 @@ cd /d "%~dp0"
 
 echo ============================================================
 echo   Sitio Web - Lic. en Psicologia
-echo   Especialista en Adicciones
+echo   Consumos Problemáticos y Adicciones
 echo ============================================================
 echo.
 

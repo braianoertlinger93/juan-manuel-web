@@ -1,4 +1,4 @@
-# Sitio web profesional — Lic. en Psicología · Especialista en Adicciones
+# Sitio web profesional — Lic. Juan Manuel Álvarez Basabe · Consumos Problemáticos y Adicciones
 
 Página web de una sola pantalla con portada fija, menú lateral, panel de
 administración y base de datos en Supabase. Pensada para un profesional de la

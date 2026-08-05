@@ -1,7 +1,7 @@
 'use strict';
 
 /* =====================================================================
-   SITIO: Lic. Juan Manuel — Especialista en Consumos Problemáticos
+   SITIO: Lic. Juan Manuel Álvarez Basabe — Consumos Problemáticos y Adicciones
    JS del lado del cliente:
    - Navegación SPA (portada fija, secciones que cambian sin scroll)
    - Carga de contenido desde Supabase (con contenido provisorio de respaldo)
@@ -15,14 +15,14 @@
   // ------------------------------------------------------------------
   const DEFAULTS = {
     hero: {
-      name: 'Lic. Juan Manuel',
+      name: 'Lic. Juan Manuel Álvarez Basabe',
       title: 'Licenciado en Psicología',
-      specialty: 'Especialista en Adicciones',
+      specialty: 'Consumos Problemáticos y Adicciones',
       phrase:
         'No tenés que atravesar este proceso en soledad. Encontrá un espacio de escucha profesional para comenzar un camino de cambio.',
       photo_url: '/assets/img/hero-portrait.svg',
       badge_1: 'Licenciado en Psicología',
-      badge_2: 'Especialista en Adicciones'
+      badge_2: 'Consumos Problemáticos y Adicciones'
     },
     about: {
       photo_url: '/assets/img/about-portrait.svg',
@@ -140,7 +140,7 @@
   function buildTitle(id) {
     const base = (remoteSettings.hero && remoteSettings.hero.name) || DEFAULTS.hero.name;
     const titles = {
-      cover: base + ' — Especialista en Consumos Problemáticos y Adicciones',
+      cover: base + ' — Consumos Problemáticos y Adicciones',
       about: 'Sobre mí — ' + base,
       specialties: 'Especialidades — ' + base,
       events: 'Charlas y Conferencias — ' + base,

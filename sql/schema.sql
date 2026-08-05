@@ -1,5 +1,5 @@
 -- =====================================================================
---  SITIO: Lic. en Psicología — Especialista en Adicciones
+--  SITIO: Lic. Juan Manuel Álvarez Basabe — Consumos Problemáticos y Adicciones
 --  Esquema completo para Supabase (PostgreSQL).
 --
 --  CÓMO USAR:
@@ -285,14 +285,14 @@ create policy "images admin delete"
 -- 6.1 Configuración general / portada / sobre mí / contacto
 insert into public.settings (key, value) values
 ('hero', '{
-  "name": "Lic. Juan Manuel",
+  "name": "Lic. Juan Manuel Álvarez Basabe",
   "last_name": "Apellido",
   "title": "Licenciado en Psicología",
-  "specialty": "Especialista en Adicciones",
+  "specialty": "Consumos Problemáticos y Adicciones",
   "phrase": "No tenés que atravesar este proceso en soledad. Encontrá un espacio de escucha profesional para comenzar un camino de cambio.",
   "photo_url": "/assets/img/hero-portrait.svg",
   "badge_1": "Licenciado en Psicología",
-  "badge_2": "Especialista en Adicciones"
+  "badge_2": "Consumos Problemáticos y Adicciones"
 }'::jsonb),
 
 ('about', '{
