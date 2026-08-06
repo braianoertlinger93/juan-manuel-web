@@ -84,6 +84,14 @@
   };
 
   // ------------------------------------------------------------------
+  // WHATSAPP: números separados por función (NO mezclar).
+  // - professional_whatsapp: consultas, turnos y contacto de Juan Manuel.
+  // - developer_whatsapp: firma de diseño y desarrollo web (Braian).
+  // ------------------------------------------------------------------
+  const professional_whatsapp = '5492474443614';
+  const developer_whatsapp = '5492477680988';
+
+  // ------------------------------------------------------------------
   // ELEMENTOS DEL DOM
   // ------------------------------------------------------------------
   const $ = (sel, ctx) => (ctx || document).querySelector(sel);
@@ -203,7 +211,7 @@
   function waMessage() {
     const c = remoteSettings.contact || DEFAULTS.contact;
     const text = c.schedule_message || DEFAULTS.contact.schedule_message;
-    return 'https://wa.me/' + (c.whatsapp || DEFAULTS.contact.whatsapp) + '?text=' + encodeURIComponent(text);
+    return 'https://wa.me/' + (c.whatsapp || professional_whatsapp) + '?text=' + encodeURIComponent(text);
   }
   function refreshContactLinks() {
     const c = remoteSettings.contact || DEFAULTS.contact;
@@ -560,7 +568,7 @@
   // ------------------------------------------------------------------
   function injectFooter() {
     const creditHref =
-      'https://wa.me/5492474443614?text=' +
+      'https://wa.me/' + developer_whatsapp + '?text=' +
       encodeURIComponent(
         'Hola Braian. Estuve viendo la página de Juan Manuel y me gustaría consultar por el desarrollo de una página web.'
       );
