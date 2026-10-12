@@ -112,35 +112,40 @@
         title: 'Maternidad y adicciones',
         description: 'Adicciones y Maternidad.',
         thumbnail_url: '/fotos/videos/video-8.jpg',
-        facebook_url: 'https://www.facebook.com/share/p/1D3W7W432g/',
+        external_url: 'https://www.instagram.com/reels/C1NwwY-ubuV/',
+        network: 'instagram',
         external: true
       },
       {
         title: 'Drogarse como mecanismo de autosabotaje',
         description: 'Adicciones: drogarse como mecanismo de autosabotaje.',
         thumbnail_url: '/fotos/videos/video-9.jpg',
-        facebook_url: 'https://www.facebook.com/share/p/19hJoTFmHt/',
+        external_url: 'https://www.instagram.com/reels/CxdQ_iXO6GH/',
+        network: 'instagram',
         external: true
       },
       {
-        title: '¿Cómo ayudar desde la familia?',
+        title: 'Adicciones: ¿Cómo ayudar desde la familia a un adicto?',
         description: 'Adicciones: ¿cómo ayudar desde la familia a un adicto?',
         thumbnail_url: '/fotos/videos/video-10.jpg',
-        facebook_url: 'https://www.facebook.com/share/p/1Ewm2Azri3/',
+        external_url: 'https://www.instagram.com/reels/CwdvNOIpXPY/',
+        network: 'instagram',
         external: true
       },
       {
-        title: '¿Puede un adicto cambiar?',
+        title: 'Adicciones: ¿Puede un adicto cambiar de realidad?',
         description: 'Adicciones: ¿puede un adicto cambiar de realidad?',
         thumbnail_url: '/fotos/videos/video-11.jpg',
-        facebook_url: 'https://www.facebook.com/share/p/1CKZdkr559/',
+        external_url: 'https://www.instagram.com/reels/CwTMiqep7SQ/',
+        network: 'instagram',
         external: true
       },
       {
         title: 'Imperceptibilidad del paso de una fase a otra',
         description: 'Adicciones: imperceptibilidad del paso de una fase a otra y desmitificación del estigma hacia el adicto.',
         thumbnail_url: '/fotos/videos/video-12.jpg',
-        facebook_url: 'https://www.facebook.com/share/p/19kgjUXiwi/',
+        external_url: 'https://www.instagram.com/reels/CwLZ31EJ5Fn/',
+        network: 'instagram',
         external: true
       }
     ]
@@ -554,30 +559,38 @@
       '<span class="video-play"><span class="video-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span>';
     const imgTag = (v) =>
       '<img src="' + escapeAttr(v.thumbnail_url || '/assets/img/video-1.svg') + '" alt="Miniatura de ' + escapeAttr(v.title) + '" loading="lazy" />';
-    const fbIcon =
-      '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 9H16l.5-3h-3V4.5c0-.9.3-1.5 1.7-1.5h1.4V.2C16.3.2 15.3 0 14.2 0 11.7 0 10 1.5 10 4.3V6H7v3h3v9h3.5V9z"/></svg>';
+    const icons = {
+      facebook: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 9H16l.5-3h-3V4.5c0-.9.3-1.5 1.7-1.5h1.4V.2C16.3.2 15.3 0 14.2 0 11.7 0 10 1.5 10 4.3V6H7v3h3v9h3.5V9z"/></svg>',
+      instagram: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>'
+    };
     list.forEach((v) => {
       const card = document.createElement('article');
       card.className = 'video-card';
-      const fbUrl = v.facebook_url || v.youtube_url || '';
-      const thumb = v.external
-        ? '<a class="video-thumb" href="' + escapeAttr(fbUrl) + '" target="_blank" rel="noopener" aria-label="Abrir publicación en Facebook: ' + escapeAttr(v.title) + '">' +
-            imgTag(v) +
+      const isExternal = !!v.external;
+      const network = v.network === 'instagram' ? 'instagram' : 'facebook';
+      const externalUrl = v.external_url || v.facebook_url || '';
+      const icon = icons[network];
+      const thumb = isExternal
+        ? '<a class="video-thumb" href="' + escapeAttr(externalUrl) + '" target="_blank" rel="noopener" aria-label="' + (network === 'instagram' ? 'Ver video en Instagram: ' : 'Abrir publicación en Facebook: ') + escapeAttr(v.title) + '">' +
+            imgTag(v) + playOverlay +
           '</a>'
         : '<button class="video-thumb" type="button" aria-label="Reproducir video: ' + escapeAttr(v.title) + '">' +
             imgTag(v) + playOverlay +
           '</button>';
-      const actionLabel = v.external ? 'Ver publicación en Facebook' : 'Ver video en Facebook';
+      const actionUrl = isExternal ? externalUrl : (v.facebook_url || v.youtube_url || '');
+      const actionLabel = isExternal
+        ? (network === 'instagram' ? 'Ver video en Instagram' : 'Ver publicación en Facebook')
+        : 'Ver video en Facebook';
       card.innerHTML =
         thumb +
         '<div class="video-body">' +
           '<h3 class="video-title">' + escapeHtml(v.title) + '</h3>' +
           '<p class="video-desc">' + escapeHtml(v.description) + '</p>' +
-          (fbUrl
-            ? '<div class="video-actions"><a class="video-fb-btn" href="' + escapeAttr(fbUrl) + '" target="_blank" rel="noopener">' + fbIcon + actionLabel + '</a></div>'
+          (actionUrl
+            ? '<div class="video-actions"><a class="video-fb-btn" href="' + escapeAttr(actionUrl) + '" target="_blank" rel="noopener">' + icon + actionLabel + '</a></div>'
             : '') +
         '</div>';
-      if (!v.external) {
+      if (!isExternal) {
         $('.video-thumb', card).addEventListener('click', () => openVideo(v.youtube_url || v.facebook_url || ''));
       }
       host.appendChild(card);
