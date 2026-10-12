@@ -562,6 +562,7 @@ h1, h2, h3, p { margin: 0; }
 }
 
 .section-head { margin-bottom: clamp(36px, 4.5vh, 52px); }
+.section-head .btn { margin-top: 20px; }
 
 /* --------------------------- Sobre mÃ­ --------------------------- */
 .about-intro {
@@ -801,6 +802,7 @@ h1, h2, h3, p { margin: 0; }
 }
 .video-thumb {
   position: relative;
+  display: block;
   aspect-ratio: 5 / 6;
   overflow: hidden;
   border: 0;

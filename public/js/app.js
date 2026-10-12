@@ -79,6 +79,69 @@
         thumbnail_url: '/fotos/videos/video-3.jpg',
         youtube_url: 'https://www.facebook.com/reel/1474005807856438/',
         facebook_url: 'https://www.facebook.com/share/r/1EDv3GtChY/'
+      },
+      {
+        title: 'Charla virtual para familiares y amigos',
+        description: 'Charla virtual para familiares y amigos de personas con problemas de adicción. Lunes de 19:30 a 20:45, modalidad online, para madres, padres, hermanos, tíos y otros familiares.',
+        thumbnail_url: '/fotos/videos/video-4.jpg',
+        youtube_url: 'https://www.facebook.com/reel/1505064074979808/',
+        facebook_url: 'https://www.facebook.com/share/r/1Q9TcXa29R/'
+      },
+      {
+        title: 'La recuperación de una adicción',
+        description: 'La recuperación no consiste solamente en dejar de consumir: implica consolidar cambios profundos y sostenidos en la forma de pensar, sentir y actuar.',
+        thumbnail_url: '/fotos/videos/video-5.jpg',
+        youtube_url: 'https://www.facebook.com/reel/2387884365034401/',
+        facebook_url: 'https://www.facebook.com/share/v/1ERgcZsU8i/'
+      },
+      {
+        title: 'Recuperarse es más que dejar de consumir',
+        description: 'Muchas personas creen que recuperarse es simplemente dejar de consumir, pero el verdadero desafío empieza después: volver a ordenar la vida, recuperar hábitos y aprender a sostenerse.',
+        thumbnail_url: '/fotos/videos/video-6.jpg',
+        youtube_url: 'https://www.facebook.com/reel/2404175330049809/',
+        facebook_url: 'https://www.facebook.com/share/v/14jpneEDuBr/'
+      },
+      {
+        title: 'No todas las señales son evidentes',
+        description: 'No todas las señales son evidentes y muchas veces se confunden con “cosas de la edad”. Cuando ciertos cambios se repiten o se intensifican, es importante prestar atención.',
+        thumbnail_url: '/fotos/videos/video-7.jpg',
+        youtube_url: 'https://www.facebook.com/reel/1307045697977924/',
+        facebook_url: 'https://www.facebook.com/share/v/19vfKL4UTP/'
+      },
+      {
+        title: 'Maternidad y adicciones',
+        description: 'Adicciones y Maternidad.',
+        thumbnail_url: '/fotos/videos/video-8.jpg',
+        facebook_url: 'https://www.facebook.com/share/p/1D3W7W432g/',
+        external: true
+      },
+      {
+        title: 'Drogarse como mecanismo de autosabotaje',
+        description: 'Adicciones: drogarse como mecanismo de autosabotaje.',
+        thumbnail_url: '/fotos/videos/video-9.jpg',
+        facebook_url: 'https://www.facebook.com/share/p/19hJoTFmHt/',
+        external: true
+      },
+      {
+        title: '¿Cómo ayudar desde la familia?',
+        description: 'Adicciones: ¿cómo ayudar desde la familia a un adicto?',
+        thumbnail_url: '/fotos/videos/video-10.jpg',
+        facebook_url: 'https://www.facebook.com/share/p/1Ewm2Azri3/',
+        external: true
+      },
+      {
+        title: '¿Puede un adicto cambiar?',
+        description: 'Adicciones: ¿puede un adicto cambiar de realidad?',
+        thumbnail_url: '/fotos/videos/video-11.jpg',
+        facebook_url: 'https://www.facebook.com/share/p/1CKZdkr559/',
+        external: true
+      },
+      {
+        title: 'Imperceptibilidad del paso de una fase a otra',
+        description: 'Adicciones: imperceptibilidad del paso de una fase a otra y desmitificación del estigma hacia el adicto.',
+        thumbnail_url: '/fotos/videos/video-12.jpg',
+        facebook_url: 'https://www.facebook.com/share/p/19kgjUXiwi/',
+        external: true
       }
     ]
   };
@@ -487,25 +550,36 @@
       host.innerHTML = '<p class="loading-hint">Próximamente nuevos videos.</p>';
       return;
     }
+    const playOverlay =
+      '<span class="video-play"><span class="video-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span>';
+    const imgTag = (v) =>
+      '<img src="' + escapeAttr(v.thumbnail_url || '/assets/img/video-1.svg') + '" alt="Miniatura de ' + escapeAttr(v.title) + '" loading="lazy" />';
+    const fbIcon =
+      '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 9H16l.5-3h-3V4.5c0-.9.3-1.5 1.7-1.5h1.4V.2C16.3.2 15.3 0 14.2 0 11.7 0 10 1.5 10 4.3V6H7v3h3v9h3.5V9z"/></svg>';
     list.forEach((v) => {
       const card = document.createElement('article');
       card.className = 'video-card';
       const fbUrl = v.facebook_url || v.youtube_url || '';
+      const thumb = v.external
+        ? '<a class="video-thumb" href="' + escapeAttr(fbUrl) + '" target="_blank" rel="noopener" aria-label="Abrir publicación en Facebook: ' + escapeAttr(v.title) + '">' +
+            imgTag(v) +
+          '</a>'
+        : '<button class="video-thumb" type="button" aria-label="Reproducir video: ' + escapeAttr(v.title) + '">' +
+            imgTag(v) + playOverlay +
+          '</button>';
+      const actionLabel = v.external ? 'Ver publicación en Facebook' : 'Ver video en Facebook';
       card.innerHTML =
-        '<button class="video-thumb" type="button" aria-label="Reproducir video: ' + escapeAttr(v.title) + '">' +
-          '<img src="' + escapeAttr(v.thumbnail_url || '/assets/img/video-1.svg') + '" alt="Miniatura de ' + escapeAttr(v.title) + '" loading="lazy" />' +
-          '<span class="video-play"><span class="video-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span>' +
-        '</button>' +
+        thumb +
         '<div class="video-body">' +
           '<h3 class="video-title">' + escapeHtml(v.title) + '</h3>' +
           '<p class="video-desc">' + escapeHtml(v.description) + '</p>' +
           (fbUrl
-            ? '<div class="video-actions"><a class="video-fb-btn" href="' + escapeAttr(fbUrl) + '" target="_blank" rel="noopener">' +
-                '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 9H16l.5-3h-3V4.5c0-.9.3-1.5 1.7-1.5h1.4V.2C16.3.2 15.3 0 14.2 0 11.7 0 10 1.5 10 4.3V6H7v3h3v9h3.5V9z"/></svg>' +
-                'Ver video en Facebook</a></div>'
+            ? '<div class="video-actions"><a class="video-fb-btn" href="' + escapeAttr(fbUrl) + '" target="_blank" rel="noopener">' + fbIcon + actionLabel + '</a></div>'
             : '') +
         '</div>';
-      $('.video-thumb', card).addEventListener('click', () => openVideo(v.youtube_url || v.facebook_url || ''));
+      if (!v.external) {
+        $('.video-thumb', card).addEventListener('click', () => openVideo(v.youtube_url || v.facebook_url || ''));
+      }
       host.appendChild(card);
     });
   }
